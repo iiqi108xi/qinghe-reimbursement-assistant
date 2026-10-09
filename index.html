@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青禾报销助手</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>青禾报销助手</h1>
+            <p>轻松查询差旅制度与报销单进度</p>
+        </header>
+
+        <section class="card">
+            <h2>🔍 报销单号查询</h2>
+            <div class="input-group">
+                <input type="text" id="ticketId" placeholder="请输入报销单号（例：R-0001）">
+                <button onclick="searchTicket()">查询进度</button>
+            </div>
+            <div id="ticketResult" class="result-box"></div>
+        </section>
+
+        <section class="card">
+            <h2>📚 差旅制度与报销说明</h2>
+            <p class="desc">点击快捷提问获取差旅标准：</p>
+            <div class="tags">
+                <button onclick="askPolicy('差旅标准')">差旅住宿补贴标准</button>
+                <button onclick="askPolicy('发票要求')">发票开具与报销规范</button>
+            </div>
+            <div id="policyResult" class="result-box"></div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
